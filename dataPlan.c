@@ -11,4 +11,14 @@ int main(){
     remainingDays=30-days;
     remainingPackage=monthlyPackage-usedPackage;
     dailyUsedPackage=usedPackage/days;
+    if(remainingPackage!=0){
+     remainingPackage=remainingPackage/remainingDays;
+     float exceedDailyUsed=dailyUsedPackage-averagePackageUsedDaily;
+     packageExceeding=30*dailyUsedPackage;
+     printf("________________________________________\n");
+     printf("%i days used, %i days remaining\n",days,remainingDays);
+     printf("Average daily use: %f GB/day\n",dailyUsedPackage);
+     printf("You are EXCEEDING your average daily use ( %f GB/day)\n",exceedDailyUsed);
+     printf("Continuing this high usage, you'll exceed your data plan by %f GB\n",packageExceeding);
+     printf("To stay below your data plan, use no more than %f GB/day\n", remainingPackage);
 }
