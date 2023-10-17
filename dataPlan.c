@@ -8,4 +8,7 @@ int main(){
     scanf("%i",&days);
     printf("How much Gb of your Package you used:");
     scanf("%f",&usedPackage);
+    remainingDays=30-days;
+    remainingPackage=monthlyPackage-usedPackage;
+    dailyUsedPackage=usedPackage/days;
 }
