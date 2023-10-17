@@ -28,4 +28,12 @@ int main(){
      printf("Average daily use: %f GB/day\n",dailyUsedPackage);
      printf("You are at or below your average daily use (%f GB/day)\n",averagePackageUsedDaily);
      printf("You can use up to %f GB/day and stay below your data plan limit\n",remainingPackageUsedDaily);
+    }else if(remainingPackage==0){
+     printf("_______________________________________________\n");   
+     printf("%i days used, %i days remaining\n",days,remainingDays);
+     printf("Average daily use: %f GB/day\n",dailyUsedPackage);
+     printf("You have already met your limit for this month.  Looks like you're getting some overage charges\n");
     }
+
+    return 0;
+}
